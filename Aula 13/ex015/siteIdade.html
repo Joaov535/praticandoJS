@@ -16,16 +16,20 @@
 
     <section>
         <div id="dados">
-            <p>
-                Digite o ano que você nasceu:
-                <input type="number" name="anonasc" id="anonasc">
+            <p>Digite o ano que você nasceu:
+                <input type="number" name="anonasc" id="anonasc" min="0">
+            </p>
+            <p>Sexo:
+                <input type="radio" name="radsex" id="masc" checked>
+                <label for="masc">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
+             </p>
+             <p>   
                 <input type="button" id="verificar" value="Verificar" onclick="verificar()">
             </p>
         </div>
-        <div id="res">
-            Resultado
-            <input type="image" src="" alt="">
-        </div>
+        <div id="res"><p id="frase"> Preencha os dados para saber o resultado</p></div>
     </section>
 
     <footer>
