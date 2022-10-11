@@ -20,7 +20,13 @@ function iniciarContagem() {
             for (let c = i; c <= f; c += p) {
                 res.innerHTML += `${c} \u{2714}`
             }
-            res.innerHTML += `\u{1F3C1}`
+
+        } else {
+            //Contagem regressiva
+            for (let c = i; c >= f; c -= p) {
+                res.innerHTML += `${c} \u{2714}`
+            }
         }
+        res.innerHTML += `\u{1F3C1}`
     }
 }
