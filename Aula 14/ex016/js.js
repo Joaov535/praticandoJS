@@ -1,18 +1,30 @@
 function iniciarContagem() {
-    var start = document.getElementById('inicio')
-    var inicio = Number(start.value)
-    var end = document.getElementById('fim')
-    var fim = Number(end.value)
-    var res = document.getElementById('res')
-    var jump = document.getElementById('passo')
-    var passo = Number(jump.value)
+    //Declaração de variáveis
+    let start = document.getElementById('inicio')
+    let inicio = Number(start.value)
+    let end = document.getElementById('fim')
+    let fim = Number(end.value)
+    let res = document.getElementById('res')
+    let jump = document.getElementById('passo')
+    let passo = Number(jump.value)
+    res.innerHTML = 'Contando: '
 
-    if(inicio % 1 !== 0 || fim % 1 !== 0 || passo % 1 !== 0) {
+    if (inicio.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+        window.alert('Impossível contar')
+    } else if (inicio % 1 !== 0 || fim % 1 !== 0 || passo % 1 !== 0) {
         alert('Digíte números inteiros')
-    } else if(inicio > fim){
-        alert('Início tem que ser menor que Fim')
+        //contagem regressiva
+    } else if (inicio >= fim) {
+        do {
+            res.innerHTML += `${inicio} `
+            inicio -= passo
+        } while (fim <= inicio)
+        //contagem progressiva
     } else {
-        
+        do {
+            res.innerHTML += `${inicio} `
+            inicio += passo
+        } while (inicio <= fim + 1)
     }
 }
 
