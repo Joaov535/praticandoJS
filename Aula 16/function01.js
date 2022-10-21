@@ -7,3 +7,9 @@ function fatorial(n) {
 }
 
 console.log(fatorial(5))
+
+function potencia(){
+    let num = 8
+    num **= 2
+    console.log(num)
+}
