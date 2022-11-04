@@ -1,2 +1,2 @@
 # praticandoJS
-praticando o conteúdo do curso de JS do Curso em Vídeo.
+praticando o conteúdo do curso de JavaScript do Curso em Vídeo.
